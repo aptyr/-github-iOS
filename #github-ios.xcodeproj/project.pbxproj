@@ -16,6 +16,8 @@
 		757DEE991E7711B700747128 /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE981E7711B700747128 /* AppService.swift */; };
 		757DEE9B1E77129900747128 /* AppServicesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE9A1E77129900747128 /* AppServicesDelegate.swift */; };
 		757DEE9D1E77154700747128 /* URLSchemaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE9C1E77154700747128 /* URLSchemaService.swift */; };
+		757DEEA01E77320C00747128 /* GithubConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE9F1E77320C00747128 /* GithubConfig.swift */; };
+		757DEEA21E77338800747128 /* GithubConfig-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757DEEA11E77338800747128 /* GithubConfig-Info.plist */; };
 		758F04AA1E6F58F600791B26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758F04A91E6F58F600791B26 /* AppDelegate.swift */; };
 		758F04AC1E6F58F600791B26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758F04AB1E6F58F600791B26 /* ViewController.swift */; };
 		758F04AF1E6F58F600791B26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758F04AD1E6F58F600791B26 /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 		757DEE981E7711B700747128 /* AppService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppService.swift; path = services/AppService.swift; sourceTree = "<group>"; };
 		757DEE9A1E77129900747128 /* AppServicesDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppServicesDelegate.swift; sourceTree = "<group>"; };
 		757DEE9C1E77154700747128 /* URLSchemaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLSchemaService.swift; path = services/URLSchemaService.swift; sourceTree = "<group>"; };
+		757DEE9F1E77320C00747128 /* GithubConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GithubConfig.swift; path = config/GithubConfig.swift; sourceTree = "<group>"; };
+		757DEEA11E77338800747128 /* GithubConfig-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GithubConfig-Info.plist"; sourceTree = "<group>"; };
 		758F04A61E6F58F600791B26 /* #github-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "#github-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		758F04A91E6F58F600791B26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		758F04AB1E6F58F600791B26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +121,14 @@
 			name = services;
 			sourceTree = "<group>";
 		};
+		757DEE9E1E77319E00747128 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				757DEE9F1E77320C00747128 /* GithubConfig.swift */,
+			);
+			name = config;
+			sourceTree = "<group>";
+		};
 		758F049D1E6F58F600791B26 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +152,7 @@
 		758F04A81E6F58F600791B26 /* #github-ios */ = {
 			isa = PBXGroup;
 			children = (
+				757DEE9E1E77319E00747128 /* config */,
 				757DEE951E77097C00747128 /* services */,
 				751B264E1E71DD3300905606 /* models */,
 				758F04A91E6F58F600791B26 /* AppDelegate.swift */,
@@ -150,6 +163,7 @@
 				758F04B21E6F58F600791B26 /* LaunchScreen.storyboard */,
 				758F04B51E6F58F600791B26 /* Info.plist */,
 				757DEE931E77026300747128 /* GoogleService-Info.plist */,
+				757DEEA11E77338800747128 /* GithubConfig-Info.plist */,
 			);
 			path = "#github-ios";
 			sourceTree = "<group>";
@@ -265,6 +279,7 @@
 				757DEE941E77026300747128 /* GoogleService-Info.plist in Resources */,
 				758F04B11E6F58F600791B26 /* Assets.xcassets in Resources */,
 				758F04AF1E6F58F600791B26 /* Main.storyboard in Resources */,
+				757DEEA21E77338800747128 /* GithubConfig-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +397,7 @@
 				757DEE991E7711B700747128 /* AppService.swift in Sources */,
 				757DEE9D1E77154700747128 /* URLSchemaService.swift in Sources */,
 				758F04AA1E6F58F600791B26 /* AppDelegate.swift in Sources */,
+				757DEEA01E77320C00747128 /* GithubConfig.swift in Sources */,
 				757DEE971E7709AA00747128 /* FirebaseService.swift in Sources */,
 				751B26501E71DD4A00905606 /* AccessToken.swift in Sources */,
 			);
