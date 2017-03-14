@@ -38,85 +38,85 @@ class AccessTokenTests: XCTestCase {
     // MARK: - Access token 1
     
     func testAccessTokenKey_OnEmptyString_ReturnNil() {
-        let accessToken = AccessToken(withParams: params1)
+        let accessToken = AccessToken(withString: params1)
         XCTAssertNil(accessToken.accessTokenKey)
     }
     
     func testScope_OnEmptyString_ReturnNil() {
-        let accessToken = AccessToken(withParams: params1)
+        let accessToken = AccessToken(withString: params1)
         XCTAssertNil(accessToken.scope)
     }
     
     func testTokenType_OnEmptyString_ReturnNil() {
-        let accessToken = AccessToken(withParams: params1)
+        let accessToken = AccessToken(withString: params1)
         XCTAssertNil(accessToken.tokenType)
     }
     
     // MARK: - Access token 2
     
     func testAccessTokenKey_OnStringWithAndChar_ReturnNil() {
-        let accessToken = AccessToken(withParams: params2)
+        let accessToken = AccessToken(withString: params2)
         XCTAssertNil(accessToken.accessTokenKey)
     }
     
     // MARK: - Access token 3
     
     func testAccessTokenKey_OnStringWithTwoAndChars_ReturnNil() {
-        let accessToken = AccessToken(withParams: params3)
+        let accessToken = AccessToken(withString: params3)
         XCTAssertNil(accessToken.accessTokenKey)
     }
     
     // MARK: - Access token 4
     
     func testAccessTokenKey_OnStringWithMultipleEqualChars_ReturnNil() {
-        let accessToken = AccessToken(withParams: params4)
+        let accessToken = AccessToken(withString: params4)
         XCTAssertNil(accessToken.accessTokenKey)
     }
     
     // MARK: - Access token 5
     
     func testAccessTokenKey_OnStringWithMultipleEqualCharsAndValidKey_ReturnNil() {
-        let accessToken = AccessToken(withParams: params5)
+        let accessToken = AccessToken(withString: params5)
         XCTAssertNil(accessToken.accessTokenKey)
     }
     
     // MARK: - Access token 6
     
     func testAccessTokenKey_OnStringWithValidKey_ReturnEmptyString() {
-        let accessToken = AccessToken(withParams: params6)
+        let accessToken = AccessToken(withString: params6)
         XCTAssertEqual(accessToken.accessTokenKey, "")
     }
     
     // MARK: - Access token 7
     
     func testAccessTokenKey_OnStringWithValidKeyAndMultipleAndChars_ReturnEqual() {
-        let accessToken = AccessToken(withParams: params7)
+        let accessToken = AccessToken(withString: params7)
         XCTAssertEqual(accessToken.accessTokenKey, "accesstokenvalue")
     }
     
     // MARK: - Access token 8
     
     func testAccessTokenKey_OnStringWithReplacedAndWithEqualChars_ReturnNil() {
-        let accessToken = AccessToken(withParams: params8)
+        let accessToken = AccessToken(withString: params8)
         XCTAssertNil(accessToken.accessTokenKey)
     }
     
     // MARK: - Access token 9
     
     func testAccessTokenKey_OnStringWithoutAccessToken_ReturnNil() {
-        let accessToken = AccessToken(withParams: params9)
+        let accessToken = AccessToken(withString: params9)
         XCTAssertNil(accessToken.accessTokenKey)
     }
     
     func testScope_OnStringWithoutAccessToken_ReturnNotNil() {
-        let accessToken = AccessToken(withParams: params9)
+        let accessToken = AccessToken(withString: params9)
         XCTAssertNotNil(accessToken.scope)
     }
     
     // MARK: - Access token 10
     
     func testAccessToken_OnValidString_ReturnNotNilValues() {
-        let accessToken = AccessToken(withParams: params10)
+        let accessToken = AccessToken(withString: params10)
 
         XCTAssertNotNil(accessToken.accessTokenKey)
         XCTAssertNotNil(accessToken.scope)

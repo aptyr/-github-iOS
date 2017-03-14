@@ -8,23 +8,36 @@
 
 import Foundation
 
-class AccessToken {
+class AccessToken: CustomStringConvertible {
     
     private(set) var accessTokenKey: String?
     private(set) var scope: String?
     private(set) var tokenType: String?
     
-    private let params: String
+    private var stringParams: String?
+    private var dictionaryParams: [String : String]?
     
-    required init(withParams params: String){
-        self.params = params
+    init(withString params: String){
         
-        let dictionary = self.dictionary(from: self.params)
+        self.stringParams = params
+        
+        let dictionary = self.dictionary(from: params)
         
         self.accessTokenKey = dictionary["access_token"]
         self.scope = dictionary["scope"]
         self.tokenType = dictionary["token_type"]
     }
+    
+    init(withDictionary params: [String : String]) {
+        
+        self.dictionaryParams = params
+        
+        self.accessTokenKey = params["access_token"]
+        self.scope = params["scope"]
+        self.tokenType = params["token_type"]
+        
+    }
+    
     
     private func dictionary(from: String) -> [String : String] {
         
@@ -52,5 +65,9 @@ class AccessToken {
             }
         
         return reduced
+    }
+    
+    var description: String {
+        return "accessTokenKey: \(self.accessTokenKey), scope: \(self.scope), tokenType: \(self.tokenType)"
     }
 }
