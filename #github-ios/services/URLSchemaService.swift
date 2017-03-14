@@ -12,7 +12,31 @@ import UIKit
 final class URLSchemaService: NSObject, AppSerivce {
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-               return true
+        if let host = url.host, host == "auth" {
+            
+            let queryItems = URLComponents(string: url.absoluteString)?.queryItems
+            let codeParam = queryItems?.filter {$0.name == "code"}.first?.value
+            
+            guard let _ = codeParam else {
+                print("No code, can't keep going.")
+                return false
+            }
+            
+            let request = ClaimAccessTokenRequest(clientID: GithubConfig.CLIENT_ID, clientSecret: GithubConfig.CLIENT_SECRET, code: codeParam!)
+            let networkService = NetworkService()
+            
+            
+            networkService.request(for: request, success: { (obj: [String : String]?) in
+                if let _ = obj {
+                    let accessToken = AccessToken(withDictionary: obj!)
+                    print("accessToken: \(accessToken)")
+                }
+
+            }, failure: { (error) in
+                
+            })
+        }
+        return true
 
     }
     

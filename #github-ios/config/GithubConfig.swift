@@ -16,7 +16,7 @@ final class GithubConfig {
                 return result
             }
         }
-        assertionFailure("Can't fild GithubConfig-Info.plist file.")
+        assertionFailure("Can't find GithubConfig-Info.plist file.")
         return nil
     }
     

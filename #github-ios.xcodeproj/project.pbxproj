@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		45DA020AB418D5F1165DFC98 /* Pods__github_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5DF9939742B7090524F146 /* Pods__github_iosTests.framework */; };
 		751B26501E71DD4A00905606 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B264F1E71DD4A00905606 /* AccessToken.swift */; };
+		757BE75E1E782AD9004E316C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BE75D1E782AD9004E316C /* NetworkService.swift */; };
+		757BE7601E783400004E316C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BE75F1E783400004E316C /* Request.swift */; };
+		757BE7631E783461004E316C /* ClaimAccessTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BE7621E783461004E316C /* ClaimAccessTokenRequest.swift */; };
+		757BE7651E7834AA004E316C /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BE7641E7834AA004E316C /* RegisterUserRequest.swift */; };
+		757BE7671E783CFB004E316C /* HTTPRequestPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BE7661E783CFB004E316C /* HTTPRequestPerformer.swift */; };
+		757BE7691E785822004E316C /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BE7681E785822004E316C /* HTTPRequest.swift */; };
 		757DEE6D1E71EAED00747128 /* AccessTokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE6C1E71EAED00747128 /* AccessTokenTests.swift */; };
 		757DEE6E1E71EBD600747128 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B264F1E71DD4A00905606 /* AccessToken.swift */; };
 		757DEE941E77026300747128 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE931E77026300747128 /* GoogleService-Info.plist */; };
@@ -39,6 +45,12 @@
 /* Begin PBXFileReference section */
 		1A554B3703E8E38A63A6EF53 /* Pods-#github-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-#github-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-#github-iosTests/Pods-#github-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		751B264F1E71DD4A00905606 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccessToken.swift; path = models/AccessToken.swift; sourceTree = "<group>"; };
+		757BE75D1E782AD9004E316C /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = network/NetworkService.swift; sourceTree = "<group>"; };
+		757BE75F1E783400004E316C /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Request.swift; path = network/Request.swift; sourceTree = "<group>"; };
+		757BE7621E783461004E316C /* ClaimAccessTokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClaimAccessTokenRequest.swift; path = network/requests/ClaimAccessTokenRequest.swift; sourceTree = "<group>"; };
+		757BE7641E7834AA004E316C /* RegisterUserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterUserRequest.swift; path = network/requests/RegisterUserRequest.swift; sourceTree = "<group>"; };
+		757BE7661E783CFB004E316C /* HTTPRequestPerformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPRequestPerformer.swift; path = network/HTTPRequestPerformer.swift; sourceTree = "<group>"; };
+		757BE7681E785822004E316C /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPRequest.swift; path = network/HTTPRequest.swift; sourceTree = "<group>"; };
 		757DEE621E71EA8C00747128 /* #github-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "#github-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757DEE661E71EA8C00747128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		757DEE6C1E71EAED00747128 /* AccessTokenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessTokenTests.swift; sourceTree = "<group>"; };
@@ -102,6 +114,27 @@
 			name = models;
 			sourceTree = "<group>";
 		};
+		757BE75C1E782A50004E316C /* network */ = {
+			isa = PBXGroup;
+			children = (
+				757BE7611E78341D004E316C /* requests */,
+				757BE75D1E782AD9004E316C /* NetworkService.swift */,
+				757BE75F1E783400004E316C /* Request.swift */,
+				757BE7661E783CFB004E316C /* HTTPRequestPerformer.swift */,
+				757BE7681E785822004E316C /* HTTPRequest.swift */,
+			);
+			name = network;
+			sourceTree = "<group>";
+		};
+		757BE7611E78341D004E316C /* requests */ = {
+			isa = PBXGroup;
+			children = (
+				757BE7621E783461004E316C /* ClaimAccessTokenRequest.swift */,
+				757BE7641E7834AA004E316C /* RegisterUserRequest.swift */,
+			);
+			name = requests;
+			sourceTree = "<group>";
+		};
 		757DEE631E71EA8C00747128 /* #github-iosTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +185,7 @@
 		758F04A81E6F58F600791B26 /* #github-ios */ = {
 			isa = PBXGroup;
 			children = (
+				757BE75C1E782A50004E316C /* network */,
 				757DEE9E1E77319E00747128 /* config */,
 				757DEE951E77097C00747128 /* services */,
 				751B264E1E71DD3300905606 /* models */,
@@ -393,11 +427,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				757DEE9B1E77129900747128 /* AppServicesDelegate.swift in Sources */,
+				757BE7631E783461004E316C /* ClaimAccessTokenRequest.swift in Sources */,
 				758F04AC1E6F58F600791B26 /* ViewController.swift in Sources */,
 				757DEE991E7711B700747128 /* AppService.swift in Sources */,
 				757DEE9D1E77154700747128 /* URLSchemaService.swift in Sources */,
+				757BE75E1E782AD9004E316C /* NetworkService.swift in Sources */,
 				758F04AA1E6F58F600791B26 /* AppDelegate.swift in Sources */,
 				757DEEA01E77320C00747128 /* GithubConfig.swift in Sources */,
+				757BE7671E783CFB004E316C /* HTTPRequestPerformer.swift in Sources */,
+				757BE7601E783400004E316C /* Request.swift in Sources */,
+				757BE7651E7834AA004E316C /* RegisterUserRequest.swift in Sources */,
+				757BE7691E785822004E316C /* HTTPRequest.swift in Sources */,
 				757DEE971E7709AA00747128 /* FirebaseService.swift in Sources */,
 				751B26501E71DD4A00905606 /* AccessToken.swift in Sources */,
 			);
