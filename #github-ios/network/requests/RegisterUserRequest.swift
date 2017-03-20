@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-final class RegisterUserRequest: Request {
+final class RegisterUserRequest: FirebaseRequest {
   
     private let email: String
     private let accessTokenKey: String

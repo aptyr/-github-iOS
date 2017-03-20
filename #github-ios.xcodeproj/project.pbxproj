@@ -10,11 +10,12 @@
 		45DA020AB418D5F1165DFC98 /* Pods__github_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5DF9939742B7090524F146 /* Pods__github_iosTests.framework */; };
 		751B26501E71DD4A00905606 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B264F1E71DD4A00905606 /* AccessToken.swift */; };
 		757BE75E1E782AD9004E316C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BE75D1E782AD9004E316C /* NetworkService.swift */; };
-		757BE7601E783400004E316C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BE75F1E783400004E316C /* Request.swift */; };
+		757BE7601E783400004E316C /* FirebaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BE75F1E783400004E316C /* FirebaseRequest.swift */; };
 		757BE7631E783461004E316C /* ClaimAccessTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BE7621E783461004E316C /* ClaimAccessTokenRequest.swift */; };
 		757BE7651E7834AA004E316C /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BE7641E7834AA004E316C /* RegisterUserRequest.swift */; };
 		757BE7671E783CFB004E316C /* HTTPRequestPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BE7661E783CFB004E316C /* HTTPRequestPerformer.swift */; };
 		757BE7691E785822004E316C /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BE7681E785822004E316C /* HTTPRequest.swift */; };
+		757BE76B1E7872D6004E316C /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BE76A1E7872D6004E316C /* UserRequest.swift */; };
 		757DEE6D1E71EAED00747128 /* AccessTokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE6C1E71EAED00747128 /* AccessTokenTests.swift */; };
 		757DEE6E1E71EBD600747128 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B264F1E71DD4A00905606 /* AccessToken.swift */; };
 		757DEE941E77026300747128 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE931E77026300747128 /* GoogleService-Info.plist */; };
@@ -29,6 +30,10 @@
 		758F04AF1E6F58F600791B26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758F04AD1E6F58F600791B26 /* Main.storyboard */; };
 		758F04B11E6F58F600791B26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 758F04B01E6F58F600791B26 /* Assets.xcassets */; };
 		758F04B41E6F58F600791B26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758F04B21E6F58F600791B26 /* LaunchScreen.storyboard */; };
+		7597C0C71E7C8F66002E2772 /* URL+Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7597C0C61E7C8F66002E2772 /* URL+Github.swift */; };
+		7597C0C91E803C1B002E2772 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7597C0C81E803C1B002E2772 /* User.swift */; };
+		7597C0CB1E80622A002E2772 /* HTTPRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7597C0CA1E80622A002E2772 /* HTTPRequestResult.swift */; };
+		7597C0CE1E807846002E2772 /* String+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7597C0CD1E807846002E2772 /* String+Dictionary.swift */; };
 		AA58A42AB509A62D05EBFCEB /* Pods__github_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9FBB1E4EABCC893F3FD299 /* Pods__github_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,11 +51,12 @@
 		1A554B3703E8E38A63A6EF53 /* Pods-#github-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-#github-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-#github-iosTests/Pods-#github-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		751B264F1E71DD4A00905606 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccessToken.swift; path = models/AccessToken.swift; sourceTree = "<group>"; };
 		757BE75D1E782AD9004E316C /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = network/NetworkService.swift; sourceTree = "<group>"; };
-		757BE75F1E783400004E316C /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Request.swift; path = network/Request.swift; sourceTree = "<group>"; };
+		757BE75F1E783400004E316C /* FirebaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseRequest.swift; path = network/FirebaseRequest.swift; sourceTree = "<group>"; };
 		757BE7621E783461004E316C /* ClaimAccessTokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClaimAccessTokenRequest.swift; path = network/requests/ClaimAccessTokenRequest.swift; sourceTree = "<group>"; };
 		757BE7641E7834AA004E316C /* RegisterUserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterUserRequest.swift; path = network/requests/RegisterUserRequest.swift; sourceTree = "<group>"; };
 		757BE7661E783CFB004E316C /* HTTPRequestPerformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPRequestPerformer.swift; path = network/HTTPRequestPerformer.swift; sourceTree = "<group>"; };
 		757BE7681E785822004E316C /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPRequest.swift; path = network/HTTPRequest.swift; sourceTree = "<group>"; };
+		757BE76A1E7872D6004E316C /* UserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserRequest.swift; path = network/requests/UserRequest.swift; sourceTree = "<group>"; };
 		757DEE621E71EA8C00747128 /* #github-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "#github-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757DEE661E71EA8C00747128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		757DEE6C1E71EAED00747128 /* AccessTokenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessTokenTests.swift; sourceTree = "<group>"; };
@@ -68,6 +74,10 @@
 		758F04B01E6F58F600791B26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		758F04B31E6F58F600791B26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		758F04B51E6F58F600791B26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7597C0C61E7C8F66002E2772 /* URL+Github.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "URL+Github.swift"; path = "network/URL+Github.swift"; sourceTree = "<group>"; };
+		7597C0C81E803C1B002E2772 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = models/User.swift; sourceTree = "<group>"; };
+		7597C0CA1E80622A002E2772 /* HTTPRequestResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPRequestResult.swift; path = network/HTTPRequestResult.swift; sourceTree = "<group>"; };
+		7597C0CD1E807846002E2772 /* String+Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Dictionary.swift"; path = "util/String+Dictionary.swift"; sourceTree = "<group>"; };
 		7B9FBB1E4EABCC893F3FD299 /* Pods__github_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods__github_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4605694B09816BECFD833B6 /* Pods-#github-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-#github-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-#github-ios/Pods-#github-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		EB50596BD11F5C7A592F7541 /* Pods-#github-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-#github-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-#github-iosTests/Pods-#github-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,7 +119,7 @@
 		751B264E1E71DD3300905606 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				751B264F1E71DD4A00905606 /* AccessToken.swift */,
+				7597C0C81E803C1B002E2772 /* User.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -119,9 +129,12 @@
 			children = (
 				757BE7611E78341D004E316C /* requests */,
 				757BE75D1E782AD9004E316C /* NetworkService.swift */,
-				757BE75F1E783400004E316C /* Request.swift */,
+				757BE75F1E783400004E316C /* FirebaseRequest.swift */,
 				757BE7661E783CFB004E316C /* HTTPRequestPerformer.swift */,
 				757BE7681E785822004E316C /* HTTPRequest.swift */,
+				7597C0C61E7C8F66002E2772 /* URL+Github.swift */,
+				751B264F1E71DD4A00905606 /* AccessToken.swift */,
+				7597C0CA1E80622A002E2772 /* HTTPRequestResult.swift */,
 			);
 			name = network;
 			sourceTree = "<group>";
@@ -131,6 +144,7 @@
 			children = (
 				757BE7621E783461004E316C /* ClaimAccessTokenRequest.swift */,
 				757BE7641E7834AA004E316C /* RegisterUserRequest.swift */,
+				757BE76A1E7872D6004E316C /* UserRequest.swift */,
 			);
 			name = requests;
 			sourceTree = "<group>";
@@ -185,6 +199,7 @@
 		758F04A81E6F58F600791B26 /* #github-ios */ = {
 			isa = PBXGroup;
 			children = (
+				7597C0CC1E80782D002E2772 /* util */,
 				757BE75C1E782A50004E316C /* network */,
 				757DEE9E1E77319E00747128 /* config */,
 				757DEE951E77097C00747128 /* services */,
@@ -200,6 +215,14 @@
 				757DEEA11E77338800747128 /* GithubConfig-Info.plist */,
 			);
 			path = "#github-ios";
+			sourceTree = "<group>";
+		};
+		7597C0CC1E80782D002E2772 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				7597C0CD1E807846002E2772 /* String+Dictionary.swift */,
+			);
+			name = util;
 			sourceTree = "<group>";
 		};
 		A883424B6CA15D39B26DB7BA /* Frameworks */ = {
@@ -429,14 +452,19 @@
 				757DEE9B1E77129900747128 /* AppServicesDelegate.swift in Sources */,
 				757BE7631E783461004E316C /* ClaimAccessTokenRequest.swift in Sources */,
 				758F04AC1E6F58F600791B26 /* ViewController.swift in Sources */,
+				7597C0CE1E807846002E2772 /* String+Dictionary.swift in Sources */,
 				757DEE991E7711B700747128 /* AppService.swift in Sources */,
+				7597C0CB1E80622A002E2772 /* HTTPRequestResult.swift in Sources */,
 				757DEE9D1E77154700747128 /* URLSchemaService.swift in Sources */,
 				757BE75E1E782AD9004E316C /* NetworkService.swift in Sources */,
 				758F04AA1E6F58F600791B26 /* AppDelegate.swift in Sources */,
+				7597C0C91E803C1B002E2772 /* User.swift in Sources */,
 				757DEEA01E77320C00747128 /* GithubConfig.swift in Sources */,
+				757BE76B1E7872D6004E316C /* UserRequest.swift in Sources */,
 				757BE7671E783CFB004E316C /* HTTPRequestPerformer.swift in Sources */,
-				757BE7601E783400004E316C /* Request.swift in Sources */,
+				757BE7601E783400004E316C /* FirebaseRequest.swift in Sources */,
 				757BE7651E7834AA004E316C /* RegisterUserRequest.swift in Sources */,
+				7597C0C71E7C8F66002E2772 /* URL+Github.swift in Sources */,
 				757BE7691E785822004E316C /* HTTPRequest.swift in Sources */,
 				757DEE971E7709AA00747128 /* FirebaseService.swift in Sources */,
 				751B26501E71DD4A00905606 /* AccessToken.swift in Sources */,

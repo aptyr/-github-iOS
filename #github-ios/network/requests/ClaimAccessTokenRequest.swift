@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class ClaimAccessTokenRequest: Request, HTTPRequest {
+final class ClaimAccessTokenRequest: HTTPRequest {
     
     private let clientID: String
     private let clientSecret: String
@@ -28,28 +28,19 @@ final class ClaimAccessTokenRequest: Request, HTTPRequest {
         return .POST
     }
     
-    var url: URL {
-        return URL(string: "https://github.com/login/oauth/access_token\(endpoint)")!
+    var url: URL? {
+        return URL.githubAccessTokenURL()
     }
     
-    var params: [String : String]? {
-        return [
+    var params: (dict: [String : String], type: HTTPRequestPerformer.ParamsType)? {
+        return ([
             "client_id" : self.clientID,
             "client_secret" : self.clientSecret,
             "code" : self.code
-        ]
+            ], .String)
     }
     
-    var headers: [String : String]? {
-        return self.jsonHeaders()
-    }
-    
-    var paramsType: HTTPRequestPerformer.ParamsType? {
-        return .String
-    }
-    
-    func perform(success: ((AnyObject?) -> Void)?, failure: ((Error) -> Void)?) {
-        let requestPerformer = HTTPRequestPerformer(withHTTPRequest: self)
-        requestPerformer.perform(success: success, failure: failure)
+    var headers: HTTPRequest.Headers? {
+        return self.jsonHeader()
     }
 }

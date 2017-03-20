@@ -14,7 +14,7 @@ class NetworkService {
         case POST, GET
     }
     
-    func request<T>(for request: Request, success: ((T?) -> Void)?, failure: ((Error) -> Void)?) {
+    func request<T>(forFirebase request: FirebaseRequest, success: ((T?) -> Void)?, failure: ((Error) -> Void)?) {
         request.perform(success: {
             if let obj = $0 {
                 success?(obj as? T)
@@ -23,4 +23,33 @@ class NetworkService {
             }
         }, failure: { failure?($0) })
     }
+    
+    func request<T: HTTPRequestResult>(forHTTP request: HTTPRequest, success: ((T?) -> Void)?, failure: ((Error) -> Void)?) {
+        let requestPerformer = HTTPRequestPerformer(withHTTPRequest: request)
+        requestPerformer.perform(success: { (result) in
+            
+            if let _ = result {
+                success?(self.content(data: result!))
+            }
+            
+            success?(nil)
+            
+        }, failure: failure)
+        
+    }
+    
+    private func content<T: HTTPRequestResult>(data: Data) -> T? {
+        
+        do {
+            
+            return try T(withApiData: data)
+            
+        } catch {
+            print("content error: \(error)")
+        }
+        
+        
+        return nil
+    }
+    
 }

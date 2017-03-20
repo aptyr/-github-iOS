@@ -10,23 +10,27 @@ import Foundation
 
 protocol HTTPRequest {
     
+    typealias Headers = [String : String]
+    
     var endpoint: String { get }
     
     var method: NetworkService.Method { get }
     
-    var url: URL { get }
+    var url: URL? { get }
     
-    var headers: [String: String]? { get }
+    var headers: Headers? { get }
     
-    var params: [String: String]? { get }
-    
-    var paramsType: HTTPRequestPerformer.ParamsType? { get }
+    var params: (dict: [String: String], type: HTTPRequestPerformer.ParamsType)? { get }
 }
 
 extension HTTPRequest {
     
-    func jsonHeaders() -> [String : String] {
+    func jsonHeader() -> Headers {
         return ["Accept" : "application/json"]
+    }
+    
+    func tokenHeader(accessTokenKey key: String) -> Headers {
+        return ["Authorization":"token \(key)"]
     }
     
 }

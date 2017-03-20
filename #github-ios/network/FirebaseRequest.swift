@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol Request {
+protocol FirebaseRequest {
     
     func perform(success: ((AnyObject?) -> Void)?, failure: ((Error) -> Void)?)
 }

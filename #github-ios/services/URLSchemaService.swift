@@ -22,19 +22,35 @@ final class URLSchemaService: NSObject, AppSerivce {
                 return false
             }
             
-            let request = ClaimAccessTokenRequest(clientID: GithubConfig.CLIENT_ID, clientSecret: GithubConfig.CLIENT_SECRET, code: codeParam!)
+            let accessTokenRequest = ClaimAccessTokenRequest(clientID: GithubConfig.CLIENT_ID, clientSecret: GithubConfig.CLIENT_SECRET, code: codeParam!)
+            
             let networkService = NetworkService()
             
             
-            networkService.request(for: request, success: { (obj: [String : String]?) in
-                if let _ = obj {
-                    let accessToken = AccessToken(withDictionary: obj!)
-                    print("accessToken: \(accessToken)")
-                }
-
-            }, failure: { (error) in
+            networkService.request(forHTTP: accessTokenRequest, success: { (accessToken: AccessToken?) in
                 
+                if let _ = accessToken {
+                   
+                    print("accessToken: \(accessToken!.accessTokenKey)")
+                    
+                    let r = RegisterUserRequest(email: "mail@matusiakartur.com", accessTokenKey: accessToken!.accessTokenKey!)
+                    r.perform(success: nil, failure: nil)
+                    
+                    let userRequest = UserRequest(withAccessTokenKey: accessToken!.accessTokenKey!)
+                    
+                    networkService.request(forHTTP: userRequest, success: { (obj: User?) in
+                        
+                    }, failure: { (error) in
+                        print("error \(error)")
+                    })
+                    
+                }
+                
+                
+            }, failure: { (error) in
+                print("error: \(error)")
             })
+            
         }
         return true
 
