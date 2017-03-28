@@ -34,6 +34,8 @@
 		7597C0C91E803C1B002E2772 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7597C0C81E803C1B002E2772 /* User.swift */; };
 		7597C0CB1E80622A002E2772 /* HTTPRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7597C0CA1E80622A002E2772 /* HTTPRequestResult.swift */; };
 		7597C0CE1E807846002E2772 /* String+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7597C0CD1E807846002E2772 /* String+Dictionary.swift */; };
+		75D5B1AF1E8AD70200440AA8 /* String+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7597C0CD1E807846002E2772 /* String+Dictionary.swift */; };
+		75D5B1B01E8AD71700440AA8 /* HTTPRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7597C0CA1E80622A002E2772 /* HTTPRequestResult.swift */; };
 		AA58A42AB509A62D05EBFCEB /* Pods__github_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9FBB1E4EABCC893F3FD299 /* Pods__github_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -291,13 +293,13 @@
 					757DEE611E71EA8C00747128 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 9HD446P758;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = 758F04A51E6F58F600791B26;
 					};
 					758F04A51E6F58F600791B26 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 9HD446P758;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -441,6 +443,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				757DEE6D1E71EAED00747128 /* AccessTokenTests.swift in Sources */,
+				75D5B1AF1E8AD70200440AA8 /* String+Dictionary.swift in Sources */,
+				75D5B1B01E8AD71700440AA8 /* HTTPRequestResult.swift in Sources */,
 				757DEE6E1E71EBD600747128 /* AccessToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,11 +510,13 @@
 			baseConfigurationReference = EB50596BD11F5C7A592F7541 /* Pods-#github-iosTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 9HD446P758;
 				INFOPLIST_FILE = "#github-iosTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.matusiakartur.-github-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/#github-ios.app/#github-ios";
 			};
@@ -526,6 +532,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.matusiakartur.-github-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/#github-ios.app/#github-ios";
 			};
@@ -635,6 +642,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.matusiakartur.-github-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "afb467b4-6aa5-4923-a666-097b23c227b6";
+				PROVISIONING_PROFILE_SPECIFIER = "Hashtag Github iOS Development";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -644,12 +653,14 @@
 			baseConfigurationReference = FDC06F71F750BFC65E4D0675 /* Pods-#github-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 9HD446P758;
 				INFOPLIST_FILE = "#github-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.matusiakartur.-github-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "10850da8-2fbe-4832-bff9-62536718b01c";
+				PROVISIONING_PROFILE_SPECIFIER = "Hashtag Github iOS Distribution";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
