@@ -1,0 +1,13 @@
+language: objective-c
+
+branches:
+ only:
+ - master
+
+xcode_project: \#github-ios.xcodeproj
+xcode_scheme: \#github-iosTests
+osx_image: xcode8.3
+xcode_sdk: iphonesimulator10.3
+
+script:
+- xcodebuild clean build test -project \#github-ios.xcodeproj -scheme \#github-iosTests
