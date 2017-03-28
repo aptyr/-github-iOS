@@ -24,7 +24,7 @@ class UserRequest: HTTPRequest {
     var endpoint: String {
         guard let _ = self.username else { return "/user" }
         
-        return "/user/\(self.username!)"
+        return "/users/\(self.username!)"
     }
     
     var headers: HTTPRequest.Headers? {
@@ -37,11 +37,11 @@ class UserRequest: HTTPRequest {
         return .GET
     }
     
-    var params: (dict: [String : String], type: HTTPRequestPerformer.ParamsType)? {
+    var params: (dict: [String : String], type: NetworkService.ParamsType)? {
         return nil
     }
     
     var url: URL? {
-        return URL.githubApiURL(for: self)
+        return GithubConfig.apiURL(for: self)
     }
 }

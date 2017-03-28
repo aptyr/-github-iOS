@@ -14,6 +14,10 @@ class NetworkService {
         case POST, GET
     }
     
+    enum ParamsType {
+        case JSON, String
+    }
+    
     func request<T>(forFirebase request: FirebaseRequest, success: ((T?) -> Void)?, failure: ((Error) -> Void)?) {
         request.perform(success: {
             if let obj = $0 {
@@ -30,26 +34,31 @@ class NetworkService {
             
             if let _ = result {
                 success?(self.content(data: result!))
+                return
             }
             
             success?(nil)
             
         }, failure: failure)
-        
     }
     
-    private func content<T: HTTPRequestResult>(data: Data) -> T? {
+    
+}
+
+
+extension NetworkService {
+    
+    fileprivate func content<T: HTTPRequestResult>(data: Data) -> T? {
         
         do {
-            
             return try T(withApiData: data)
             
         } catch {
             print("content error: \(error)")
         }
         
-        
         return nil
     }
+
     
 }

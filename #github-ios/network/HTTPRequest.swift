@@ -20,7 +20,7 @@ protocol HTTPRequest {
     
     var headers: Headers? { get }
     
-    var params: (dict: [String: String], type: HTTPRequestPerformer.ParamsType)? { get }
+    var params: (dict: [String: String], type: NetworkService.ParamsType)? { get }
 }
 
 extension HTTPRequest {

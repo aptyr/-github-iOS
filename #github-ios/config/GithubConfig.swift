@@ -30,3 +30,16 @@ final class GithubConfig {
         return value
     }
 }
+
+extension GithubConfig {
+    
+    static func accessTokenURL() -> URL? {
+        return URL(string: "https://github.com/login/oauth/access_token")
+    }
+    
+    static func apiURL(for request: HTTPRequest) -> URL? {
+        return URL(string: "https://api.github.com\(request.endpoint)")
+    }
+    
+}
+

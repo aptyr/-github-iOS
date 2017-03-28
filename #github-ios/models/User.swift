@@ -10,7 +10,9 @@ import Foundation
 
 struct User: HTTPRequestResult {
     
-    init(withApiData: Data) throws {
-        
+    init(withApiData data: Data) throws {
+     //   let params = try JSONSerialization.jsonObject(with: data, options: []) as! [String: String]
+
+        print("user \(data)")
     }
 }

@@ -29,10 +29,10 @@ final class ClaimAccessTokenRequest: HTTPRequest {
     }
     
     var url: URL? {
-        return URL.githubAccessTokenURL()
+        return GithubConfig.accessTokenURL()
     }
     
-    var params: (dict: [String : String], type: HTTPRequestPerformer.ParamsType)? {
+    var params: (dict: [String : String], type: NetworkService.ParamsType)? {
         return ([
             "client_id" : self.clientID,
             "client_secret" : self.clientSecret,

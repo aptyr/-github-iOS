@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 final class URLSchemaService: NSObject, AppSerivce {
     
@@ -29,22 +30,54 @@ final class URLSchemaService: NSObject, AppSerivce {
             
             networkService.request(forHTTP: accessTokenRequest, success: { (accessToken: AccessToken?) in
                 
-                if let _ = accessToken {
-                   
-                    print("accessToken: \(accessToken!.accessTokenKey)")
+                print("access \(accessToken)")
+                
+                let userRequest = UserRequest(withAccessTokenKey: accessToken!.accessTokenKey!)
+                
+                networkService.request(forHTTP: userRequest, success: { (obj: User?) in
                     
-                    let r = RegisterUserRequest(email: "mail@matusiakartur.com", accessTokenKey: accessToken!.accessTokenKey!)
-                    r.perform(success: nil, failure: nil)
                     
-                    let userRequest = UserRequest(withAccessTokenKey: accessToken!.accessTokenKey!)
+                    let userRequest2 = UserRequest(withUsername: "aptyr")
                     
-                    networkService.request(forHTTP: userRequest, success: { (obj: User?) in
+                    networkService.request(forHTTP: userRequest2, success: { (obj: User?) in
                         
                     }, failure: { (error) in
                         print("error \(error)")
                     })
                     
-                }
+                    
+                }, failure: { (error) in
+                    print("error \(error)")
+                })
+                
+                
+                
+//                
+//                if let _ = accessToken {
+//                    
+//                    let registerRequest = RegisterUserRequest(email: "mail@matusiakartur.com", accessTokenKey: accessToken!.accessTokenKey!)
+//                    registerRequest.perform(success: nil, failure: nil)
+//                    
+//                    networkService.request(forFirebase: registerRequest, success: { (obj: FIRUser?) in
+//                        
+//                        
+//                        let userRequest = UserRequest(withAccessTokenKey: accessToken!.accessTokenKey!)
+//                        
+//                        networkService.request(forHTTP: userRequest, success: { (obj: User?) in
+//                            
+//                        }, failure: { (error) in
+//                            print("error \(error)")
+//                        })
+//                        
+//                        
+//                    }, failure: { (error) in
+//                        print("error \(error)")
+//                    })
+//                    
+//                    
+//                   
+//                    
+//                }
                 
                 
             }, failure: { (error) in

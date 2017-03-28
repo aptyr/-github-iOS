@@ -22,7 +22,6 @@ final class AccessToken: HTTPRequestResult {
         self.accessTokenKey = params["access_token"]
         self.scope = params["scope"]
         self.tokenType = params["token_type"]
-        
     }
     
     convenience init(withString params: String){
