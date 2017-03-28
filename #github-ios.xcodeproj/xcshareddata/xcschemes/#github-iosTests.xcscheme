@@ -39,6 +39,15 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "757DEE611E71EA8C00747128"
+            BuildableName = "#github-iosTests.xctest"
+            BlueprintName = "#github-iosTests"
+            ReferencedContainer = "container:#github-ios.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
