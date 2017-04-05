@@ -9,6 +9,7 @@ target '#github-ios' do
 pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod 'Firebase/Auth'
+pod 'Locksmith'
 
   target '#github-iosTests' do
     inherit! :search_paths

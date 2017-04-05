@@ -38,11 +38,13 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.0)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.0)
   - GTMSessionFetcher/Core (1.1.7)
+  - Locksmith (3.0.0)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - Locksmith
 
 SPEC CHECKSUMS:
   Firebase: 387f37c7dca894a02708da9ff35ba147040eae9e
@@ -55,7 +57,8 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
+  Locksmith: 310b4cc5031af5728bf4db5d4de547a5100c6a3b
 
-PODFILE CHECKSUM: 8d848e584dc1f318a0aa8c62c529ce4216b4f4ec
+PODFILE CHECKSUM: ad638b0c33e4899470b3fac8a500418a0351e596
 
 COCOAPODS: 1.1.1

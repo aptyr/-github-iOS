@@ -9,6 +9,21 @@
 /* Begin PBXBuildFile section */
 		45DA020AB418D5F1165DFC98 /* Pods__github_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5DF9939742B7090524F146 /* Pods__github_iosTests.framework */; };
 		751B26501E71DD4A00905606 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B264F1E71DD4A00905606 /* AccessToken.swift */; };
+		75433ED01E954A200081FB97 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433ECF1E954A200081FB97 /* LoginViewController.swift */; };
+		75433ED31E954AF50081FB97 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433ED21E954AF50081FB97 /* LoginPresenter.swift */; };
+		75433ED81E954B680081FB97 /* LoginInteractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433ED71E954B680081FB97 /* LoginInteractable.swift */; };
+		75433EDA1E954CA90081FB97 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433ED91E954CA90081FB97 /* LoginInteractor.swift */; };
+		75433EDC1E954CF40081FB97 /* LoginPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433EDB1E954CF40081FB97 /* LoginPresentable.swift */; };
+		75433EE11E95545F0081FB97 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433EE01E95545F0081FB97 /* LoginView.swift */; };
+		75433EE31E95547C0081FB97 /* LoginViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433EE21E95547C0081FB97 /* LoginViewController+View.swift */; };
+		75433EE61E9559800081FB97 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433EE51E9559800081FB97 /* FlowController.swift */; };
+		75433EF21E955E7A0081FB97 /* LoggedInState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433EEF1E955E7A0081FB97 /* LoggedInState.swift */; };
+		75433EF31E955E7A0081FB97 /* LoggedOutState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433EF01E955E7A0081FB97 /* LoggedOutState.swift */; };
+		75433EF41E955E7A0081FB97 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433EF11E955E7A0081FB97 /* LoginState.swift */; };
+		75433EF61E955EB30081FB97 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433EF51E955EB30081FB97 /* BasePresenter.swift */; };
+		75433EF81E9565100081FB97 /* Secure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433EF71E9565100081FB97 /* Secure.swift */; };
+		75433EFB1E956CEE0081FB97 /* LoginStateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433EFA1E956CEE0081FB97 /* LoginStateFactory.swift */; };
+		75433EFE1E9573CD0081FB97 /* NotificationCenterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433EFD1E9573CD0081FB97 /* NotificationCenterController.swift */; };
 		757BE75E1E782AD9004E316C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BE75D1E782AD9004E316C /* NetworkService.swift */; };
 		757BE7601E783400004E316C /* FirebaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BE75F1E783400004E316C /* FirebaseRequest.swift */; };
 		757BE7631E783461004E316C /* ClaimAccessTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BE7621E783461004E316C /* ClaimAccessTokenRequest.swift */; };
@@ -52,6 +67,22 @@
 /* Begin PBXFileReference section */
 		1A554B3703E8E38A63A6EF53 /* Pods-#github-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-#github-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-#github-iosTests/Pods-#github-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		751B264F1E71DD4A00905606 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccessToken.swift; path = models/AccessToken.swift; sourceTree = "<group>"; };
+		75433ECF1E954A200081FB97 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = view/LoginViewController.swift; sourceTree = "<group>"; };
+		75433ED21E954AF50081FB97 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = presenter/LoginPresenter.swift; sourceTree = "<group>"; };
+		75433ED71E954B680081FB97 /* LoginInteractable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginInteractable.swift; path = interactor/LoginInteractable.swift; sourceTree = "<group>"; };
+		75433ED91E954CA90081FB97 /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginInteractor.swift; path = interactor/LoginInteractor.swift; sourceTree = "<group>"; };
+		75433EDB1E954CF40081FB97 /* LoginPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginPresentable.swift; path = presenter/LoginPresentable.swift; sourceTree = "<group>"; };
+		75433EE01E95545F0081FB97 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = view/LoginView.swift; sourceTree = "<group>"; };
+		75433EE21E95547C0081FB97 /* LoginViewController+View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "LoginViewController+View.swift"; path = "view/LoginViewController+View.swift"; sourceTree = "<group>"; };
+		75433EE51E9559800081FB97 /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlowController.swift; path = flow/FlowController.swift; sourceTree = "<group>"; };
+		75433EEF1E955E7A0081FB97 /* LoggedInState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggedInState.swift; path = state/LoggedInState.swift; sourceTree = "<group>"; };
+		75433EF01E955E7A0081FB97 /* LoggedOutState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggedOutState.swift; path = state/LoggedOutState.swift; sourceTree = "<group>"; };
+		75433EF11E955E7A0081FB97 /* LoginState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginState.swift; path = state/LoginState.swift; sourceTree = "<group>"; };
+		75433EF51E955EB30081FB97 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasePresenter.swift; path = presenter/BasePresenter.swift; sourceTree = "<group>"; };
+		75433EF71E9565100081FB97 /* Secure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Secure.swift; path = util/Secure.swift; sourceTree = "<group>"; };
+		75433EF91E9565960081FB97 /* #github-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "#github-ios.entitlements"; sourceTree = "<group>"; };
+		75433EFA1E956CEE0081FB97 /* LoginStateFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginStateFactory.swift; path = state/LoginStateFactory.swift; sourceTree = "<group>"; };
+		75433EFD1E9573CD0081FB97 /* NotificationCenterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationCenterController.swift; path = notification/NotificationCenterController.swift; sourceTree = "<group>"; };
 		757BE75D1E782AD9004E316C /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = network/NetworkService.swift; sourceTree = "<group>"; };
 		757BE75F1E783400004E316C /* FirebaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseRequest.swift; path = network/FirebaseRequest.swift; sourceTree = "<group>"; };
 		757BE7621E783461004E316C /* ClaimAccessTokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClaimAccessTokenRequest.swift; path = network/requests/ClaimAccessTokenRequest.swift; sourceTree = "<group>"; };
@@ -124,6 +155,94 @@
 				7597C0C81E803C1B002E2772 /* User.swift */,
 			);
 			name = models;
+			sourceTree = "<group>";
+		};
+		75433ECE1E9549FA0081FB97 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				75433EDF1E954D190081FB97 /* login */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		75433ED11E954ADC0081FB97 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				75433EDE1E954D0D0081FB97 /* login */,
+				75433EF51E955EB30081FB97 /* BasePresenter.swift */,
+			);
+			name = presenter;
+			sourceTree = "<group>";
+		};
+		75433ED61E954B220081FB97 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				75433EDD1E954D020081FB97 /* login */,
+			);
+			name = interactor;
+			sourceTree = "<group>";
+		};
+		75433EDD1E954D020081FB97 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				75433ED71E954B680081FB97 /* LoginInteractable.swift */,
+				75433ED91E954CA90081FB97 /* LoginInteractor.swift */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		75433EDE1E954D0D0081FB97 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				75433ED21E954AF50081FB97 /* LoginPresenter.swift */,
+				75433EDB1E954CF40081FB97 /* LoginPresentable.swift */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		75433EDF1E954D190081FB97 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				75433ECF1E954A200081FB97 /* LoginViewController.swift */,
+				75433EE01E95545F0081FB97 /* LoginView.swift */,
+				75433EE21E95547C0081FB97 /* LoginViewController+View.swift */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		75433EE41E9559690081FB97 /* flow */ = {
+			isa = PBXGroup;
+			children = (
+				75433EE51E9559800081FB97 /* FlowController.swift */,
+			);
+			name = flow;
+			sourceTree = "<group>";
+		};
+		75433EED1E955E340081FB97 /* state */ = {
+			isa = PBXGroup;
+			children = (
+				75433EEE1E955E3D0081FB97 /* login */,
+			);
+			name = state;
+			sourceTree = "<group>";
+		};
+		75433EEE1E955E3D0081FB97 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				75433EEF1E955E7A0081FB97 /* LoggedInState.swift */,
+				75433EF01E955E7A0081FB97 /* LoggedOutState.swift */,
+				75433EF11E955E7A0081FB97 /* LoginState.swift */,
+				75433EFA1E956CEE0081FB97 /* LoginStateFactory.swift */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		75433EFC1E9573870081FB97 /* notification */ = {
+			isa = PBXGroup;
+			children = (
+				75433EFD1E9573CD0081FB97 /* NotificationCenterController.swift */,
+			);
+			name = notification;
 			sourceTree = "<group>";
 		};
 		757BE75C1E782A50004E316C /* network */ = {
@@ -201,6 +320,13 @@
 		758F04A81E6F58F600791B26 /* #github-ios */ = {
 			isa = PBXGroup;
 			children = (
+				75433EFC1E9573870081FB97 /* notification */,
+				75433EF91E9565960081FB97 /* #github-ios.entitlements */,
+				75433EED1E955E340081FB97 /* state */,
+				75433EE41E9559690081FB97 /* flow */,
+				75433ED61E954B220081FB97 /* interactor */,
+				75433ED11E954ADC0081FB97 /* presenter */,
+				75433ECE1E9549FA0081FB97 /* view */,
 				7597C0CC1E80782D002E2772 /* util */,
 				757BE75C1E782A50004E316C /* network */,
 				757DEE9E1E77319E00747128 /* config */,
@@ -223,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				7597C0CD1E807846002E2772 /* String+Dictionary.swift */,
+				75433EF71E9565100081FB97 /* Secure.swift */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -300,6 +427,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 9HD446P758;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -455,23 +587,38 @@
 			files = (
 				757DEE9B1E77129900747128 /* AppServicesDelegate.swift in Sources */,
 				757BE7631E783461004E316C /* ClaimAccessTokenRequest.swift in Sources */,
+				75433EE61E9559800081FB97 /* FlowController.swift in Sources */,
 				758F04AC1E6F58F600791B26 /* ViewController.swift in Sources */,
 				7597C0CE1E807846002E2772 /* String+Dictionary.swift in Sources */,
 				757DEE991E7711B700747128 /* AppService.swift in Sources */,
+				75433EDA1E954CA90081FB97 /* LoginInteractor.swift in Sources */,
 				7597C0CB1E80622A002E2772 /* HTTPRequestResult.swift in Sources */,
 				757DEE9D1E77154700747128 /* URLSchemaService.swift in Sources */,
 				757BE75E1E782AD9004E316C /* NetworkService.swift in Sources */,
+				75433ED01E954A200081FB97 /* LoginViewController.swift in Sources */,
+				75433EFE1E9573CD0081FB97 /* NotificationCenterController.swift in Sources */,
+				75433ED31E954AF50081FB97 /* LoginPresenter.swift in Sources */,
 				758F04AA1E6F58F600791B26 /* AppDelegate.swift in Sources */,
 				7597C0C91E803C1B002E2772 /* User.swift in Sources */,
+				75433EF81E9565100081FB97 /* Secure.swift in Sources */,
+				75433EE11E95545F0081FB97 /* LoginView.swift in Sources */,
+				75433ED81E954B680081FB97 /* LoginInteractable.swift in Sources */,
 				757DEEA01E77320C00747128 /* GithubConfig.swift in Sources */,
+				75433EDC1E954CF40081FB97 /* LoginPresentable.swift in Sources */,
+				75433EF61E955EB30081FB97 /* BasePresenter.swift in Sources */,
+				75433EE31E95547C0081FB97 /* LoginViewController+View.swift in Sources */,
 				757BE76B1E7872D6004E316C /* UserRequest.swift in Sources */,
+				75433EF21E955E7A0081FB97 /* LoggedInState.swift in Sources */,
 				757BE7671E783CFB004E316C /* HTTPRequestPerformer.swift in Sources */,
 				757BE7601E783400004E316C /* FirebaseRequest.swift in Sources */,
 				757BE7651E7834AA004E316C /* RegisterUserRequest.swift in Sources */,
 				7597C0C71E7C8F66002E2772 /* URL+Github.swift in Sources */,
+				75433EF41E955E7A0081FB97 /* LoginState.swift in Sources */,
 				757BE7691E785822004E316C /* HTTPRequest.swift in Sources */,
 				757DEE971E7709AA00747128 /* FirebaseService.swift in Sources */,
+				75433EFB1E956CEE0081FB97 /* LoginStateFactory.swift in Sources */,
 				751B26501E71DD4A00905606 /* AccessToken.swift in Sources */,
+				75433EF31E955E7A0081FB97 /* LoggedOutState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,6 +783,7 @@
 			baseConfigurationReference = E4605694B09816BECFD833B6 /* Pods-#github-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "#github-ios/#github-ios.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 9HD446P758;
 				INFOPLIST_FILE = "#github-ios/Info.plist";
@@ -653,6 +801,7 @@
 			baseConfigurationReference = FDC06F71F750BFC65E4D0675 /* Pods-#github-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "#github-ios/#github-ios.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 9HD446P758;
 				INFOPLIST_FILE = "#github-ios/Info.plist";
