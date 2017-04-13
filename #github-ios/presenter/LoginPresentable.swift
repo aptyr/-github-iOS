@@ -1,5 +1,5 @@
 //
-//  LoginPresentable.swift
+//  LoginPresenter.swift
 //  #github-ios
 //
 //  Created by Artur on 05/04/2017.
@@ -8,32 +8,11 @@
 
 import Foundation
 
-class LoginPresentable: LoginPresenter {
+
+protocol LoginPresentable : class, BasePresenter {
     
-    private let view: LoginView
-    private var interactor: LoginInteractor?
+    init(view: LoginView)
     
-    private var state: LoginState? {
-        return LoginStateFactory.getLoginState(hasAccessTokenKey: Secure.token(forUser: "aptyr") != nil)
-    }
-    
-    required init(view: LoginView) {
-        self.view = view
-        
-        self.interactor = LoginInteractable(presenter: self)
-        
-    }
-    
-    func updateView() {
-        
-        guard let state = self.state else { return }
-        
-        self.view.webView(asHidden: state.shouldWebViewBeHidden())
-    }
-    
-    func receivedAuthCode(code: String) {
-        self.interactor?.getAccessToken(code: code)
-    }
+    func obtain(accessToken: AccessToken)
+
 }
-
-

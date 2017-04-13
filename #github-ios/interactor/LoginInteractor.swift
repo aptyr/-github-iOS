@@ -8,9 +8,21 @@
 
 import Foundation
 
-protocol LoginInteractor : class {
+class LoginInteractor: LoginInteractable {
     
-    init(presenter: LoginPresenter)
+    private let presenter: LoginPresenter
+    private let networkService = NetworkService()
     
-    func getAccessToken(code: String)
+    required init(presenter: LoginPresenter) {
+        self.presenter = presenter
+    }
+    
+    func getAccessToken(code: String) {
+        let accessTokenRequest = ClaimAccessTokenRequest(clientID: GithubConfig.CLIENT_ID, clientSecret: GithubConfig.CLIENT_SECRET, code: code)
+        networkService.request(forHTTP: accessTokenRequest, success: { (accessToken: AccessToken?) in
+            self.presenter.obtain(accessToken: accessToken!)
+        }, failure: { (error) in
+            print("error \(error)")
+        })
+    }
 }

@@ -10,10 +10,11 @@ import Foundation
 
 extension LoginViewController: LoginView {
  
-    
     func webView(asHidden hidden: Bool) {
         self.webView.isHidden = hidden
-        
-         
+    }
+    
+    func close() {
+        self.dismiss(animated: true, completion: nil)
     }
 }

@@ -12,4 +12,6 @@ protocol LoginView {
     
     func webView(asHidden hidden : Bool)
     
+    func close()
+    
 }

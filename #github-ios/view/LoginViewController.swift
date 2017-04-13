@@ -11,14 +11,13 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    private var presenter: LoginPresenter!
+    private var presenter: LoginPresentable!
     
     @IBOutlet weak var webView: UIWebView!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
-        self.presenter = LoginPresentable(view: self)
+        self.presenter = LoginPresenter(view: self)
         
         self.presenter.updateView()
         
@@ -27,9 +26,7 @@ class LoginViewController: UIViewController {
     }
     
     private func initWebView() {
-        let url = URL (string: "https://github.com/login/oauth/authorize?client_id=\(GithubConfig.CLIENT_ID)");
-        let requestObj = URLRequest(url: url!);
-        self.webView.loadRequest(requestObj);
+        self.webView.loadRequest(URLRequest(url: URL(string: "https://github.com/login/oauth/authorize?client_id=\(GithubConfig.CLIENT_ID)")!));
     }
     
 }

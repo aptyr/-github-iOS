@@ -14,22 +14,19 @@ class NotificationCenterController {
     static let shared = NotificationCenterController()
     private init() {}
     
+    private static let notificationCenter = NotificationCenter.default
+    private static let authURLSchema = Notification.Name(rawValue: "authURLSchema")
     
-    private let notificationCenter = NotificationCenter.default
-    
-    private let authURLSchema = Notification.Name(rawValue: "authURLSchema")
-   
-    
-    func observeAuthURLSchema(notificationHandler handler: @escaping (Notification) -> Void) {
-        print("observeAuthURLSchema")
+    class func observeAuthURLSchema(notificationHandler handler: @escaping (Notification) -> Void) {
         notificationCenter.addObserver(forName: authURLSchema, object: nil, queue: nil, using: handler)
     }
     
-    func authURLSchemaReceived(url: URL){
-        print("authURLSchemaReceived")
-        notificationCenter.post(name:authURLSchema, object: url)
+    class func stopObserveAuthURLSchema(observer: Any) {
+        notificationCenter.removeObserver(observer, name: authURLSchema, object: nil)
     }
     
-   
+    class func authURLSchemaReceived(url: URL){
+        notificationCenter.post(name:authURLSchema, object: url)
+    }
 }
 

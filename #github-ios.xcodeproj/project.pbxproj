@@ -10,10 +10,10 @@
 		45DA020AB418D5F1165DFC98 /* Pods__github_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5DF9939742B7090524F146 /* Pods__github_iosTests.framework */; };
 		751B26501E71DD4A00905606 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B264F1E71DD4A00905606 /* AccessToken.swift */; };
 		75433ED01E954A200081FB97 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433ECF1E954A200081FB97 /* LoginViewController.swift */; };
-		75433ED31E954AF50081FB97 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433ED21E954AF50081FB97 /* LoginPresenter.swift */; };
-		75433ED81E954B680081FB97 /* LoginInteractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433ED71E954B680081FB97 /* LoginInteractable.swift */; };
-		75433EDA1E954CA90081FB97 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433ED91E954CA90081FB97 /* LoginInteractor.swift */; };
-		75433EDC1E954CF40081FB97 /* LoginPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433EDB1E954CF40081FB97 /* LoginPresentable.swift */; };
+		75433ED31E954AF50081FB97 /* LoginPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433ED21E954AF50081FB97 /* LoginPresentable.swift */; };
+		75433ED81E954B680081FB97 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433ED71E954B680081FB97 /* LoginInteractor.swift */; };
+		75433EDA1E954CA90081FB97 /* LoginInteractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433ED91E954CA90081FB97 /* LoginInteractable.swift */; };
+		75433EDC1E954CF40081FB97 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433EDB1E954CF40081FB97 /* LoginPresenter.swift */; };
 		75433EE11E95545F0081FB97 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433EE01E95545F0081FB97 /* LoginView.swift */; };
 		75433EE31E95547C0081FB97 /* LoginViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433EE21E95547C0081FB97 /* LoginViewController+View.swift */; };
 		75433EE61E9559800081FB97 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75433EE51E9559800081FB97 /* FlowController.swift */; };
@@ -45,6 +45,9 @@
 		758F04AF1E6F58F600791B26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758F04AD1E6F58F600791B26 /* Main.storyboard */; };
 		758F04B11E6F58F600791B26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 758F04B01E6F58F600791B26 /* Assets.xcassets */; };
 		758F04B41E6F58F600791B26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758F04B21E6F58F600791B26 /* LaunchScreen.storyboard */; };
+		7592F8981E969B1900A89CF8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7592F8971E969B1900A89CF8 /* Login.storyboard */; };
+		7592F89B1E96B33200A89CF8 /* EnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7592F89A1E96B33100A89CF8 /* EnterViewController.swift */; };
+		7592F89D1E96B99100A89CF8 /* UILabel+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7592F89C1E96B99100A89CF8 /* UILabel+Animation.swift */; };
 		7597C0C71E7C8F66002E2772 /* URL+Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7597C0C61E7C8F66002E2772 /* URL+Github.swift */; };
 		7597C0C91E803C1B002E2772 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7597C0C81E803C1B002E2772 /* User.swift */; };
 		7597C0CB1E80622A002E2772 /* HTTPRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7597C0CA1E80622A002E2772 /* HTTPRequestResult.swift */; };
@@ -68,10 +71,10 @@
 		1A554B3703E8E38A63A6EF53 /* Pods-#github-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-#github-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-#github-iosTests/Pods-#github-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		751B264F1E71DD4A00905606 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccessToken.swift; path = models/AccessToken.swift; sourceTree = "<group>"; };
 		75433ECF1E954A200081FB97 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = view/LoginViewController.swift; sourceTree = "<group>"; };
-		75433ED21E954AF50081FB97 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = presenter/LoginPresenter.swift; sourceTree = "<group>"; };
-		75433ED71E954B680081FB97 /* LoginInteractable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginInteractable.swift; path = interactor/LoginInteractable.swift; sourceTree = "<group>"; };
-		75433ED91E954CA90081FB97 /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginInteractor.swift; path = interactor/LoginInteractor.swift; sourceTree = "<group>"; };
-		75433EDB1E954CF40081FB97 /* LoginPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginPresentable.swift; path = presenter/LoginPresentable.swift; sourceTree = "<group>"; };
+		75433ED21E954AF50081FB97 /* LoginPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginPresentable.swift; path = presenter/LoginPresentable.swift; sourceTree = "<group>"; };
+		75433ED71E954B680081FB97 /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginInteractor.swift; path = interactor/LoginInteractor.swift; sourceTree = "<group>"; };
+		75433ED91E954CA90081FB97 /* LoginInteractable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginInteractable.swift; path = interactor/LoginInteractable.swift; sourceTree = "<group>"; };
+		75433EDB1E954CF40081FB97 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = presenter/LoginPresenter.swift; sourceTree = "<group>"; };
 		75433EE01E95545F0081FB97 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = view/LoginView.swift; sourceTree = "<group>"; };
 		75433EE21E95547C0081FB97 /* LoginViewController+View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "LoginViewController+View.swift"; path = "view/LoginViewController+View.swift"; sourceTree = "<group>"; };
 		75433EE51E9559800081FB97 /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlowController.swift; path = flow/FlowController.swift; sourceTree = "<group>"; };
@@ -107,6 +110,9 @@
 		758F04B01E6F58F600791B26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		758F04B31E6F58F600791B26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		758F04B51E6F58F600791B26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7592F8971E969B1900A89CF8 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		7592F89A1E96B33100A89CF8 /* EnterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnterViewController.swift; path = view/EnterViewController.swift; sourceTree = "<group>"; };
+		7592F89C1E96B99100A89CF8 /* UILabel+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILabel+Animation.swift"; path = "util/UILabel+Animation.swift"; sourceTree = "<group>"; };
 		7597C0C61E7C8F66002E2772 /* URL+Github.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "URL+Github.swift"; path = "network/URL+Github.swift"; sourceTree = "<group>"; };
 		7597C0C81E803C1B002E2772 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = models/User.swift; sourceTree = "<group>"; };
 		7597C0CA1E80622A002E2772 /* HTTPRequestResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPRequestResult.swift; path = network/HTTPRequestResult.swift; sourceTree = "<group>"; };
@@ -160,6 +166,7 @@
 		75433ECE1E9549FA0081FB97 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				7592F8991E96B31800A89CF8 /* enter */,
 				75433EDF1E954D190081FB97 /* login */,
 			);
 			name = view;
@@ -185,8 +192,8 @@
 		75433EDD1E954D020081FB97 /* login */ = {
 			isa = PBXGroup;
 			children = (
-				75433ED71E954B680081FB97 /* LoginInteractable.swift */,
-				75433ED91E954CA90081FB97 /* LoginInteractor.swift */,
+				75433ED71E954B680081FB97 /* LoginInteractor.swift */,
+				75433ED91E954CA90081FB97 /* LoginInteractable.swift */,
 			);
 			name = login;
 			sourceTree = "<group>";
@@ -194,8 +201,8 @@
 		75433EDE1E954D0D0081FB97 /* login */ = {
 			isa = PBXGroup;
 			children = (
-				75433ED21E954AF50081FB97 /* LoginPresenter.swift */,
-				75433EDB1E954CF40081FB97 /* LoginPresentable.swift */,
+				75433ED21E954AF50081FB97 /* LoginPresentable.swift */,
+				75433EDB1E954CF40081FB97 /* LoginPresenter.swift */,
 			);
 			name = login;
 			sourceTree = "<group>";
@@ -336,6 +343,7 @@
 				757DEE9A1E77129900747128 /* AppServicesDelegate.swift */,
 				758F04AB1E6F58F600791B26 /* ViewController.swift */,
 				758F04AD1E6F58F600791B26 /* Main.storyboard */,
+				7592F8971E969B1900A89CF8 /* Login.storyboard */,
 				758F04B01E6F58F600791B26 /* Assets.xcassets */,
 				758F04B21E6F58F600791B26 /* LaunchScreen.storyboard */,
 				758F04B51E6F58F600791B26 /* Info.plist */,
@@ -345,11 +353,20 @@
 			path = "#github-ios";
 			sourceTree = "<group>";
 		};
+		7592F8991E96B31800A89CF8 /* enter */ = {
+			isa = PBXGroup;
+			children = (
+				7592F89A1E96B33100A89CF8 /* EnterViewController.swift */,
+			);
+			name = enter;
+			sourceTree = "<group>";
+		};
 		7597C0CC1E80782D002E2772 /* util */ = {
 			isa = PBXGroup;
 			children = (
 				7597C0CD1E807846002E2772 /* String+Dictionary.swift */,
 				75433EF71E9565100081FB97 /* Secure.swift */,
+				7592F89C1E96B99100A89CF8 /* UILabel+Animation.swift */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -468,6 +485,7 @@
 			files = (
 				758F04B41E6F58F600791B26 /* LaunchScreen.storyboard in Resources */,
 				757DEE941E77026300747128 /* GoogleService-Info.plist in Resources */,
+				7592F8981E969B1900A89CF8 /* Login.storyboard in Resources */,
 				758F04B11E6F58F600791B26 /* Assets.xcassets in Resources */,
 				758F04AF1E6F58F600791B26 /* Main.storyboard in Resources */,
 				757DEEA21E77338800747128 /* GithubConfig-Info.plist in Resources */,
@@ -588,23 +606,25 @@
 				757DEE9B1E77129900747128 /* AppServicesDelegate.swift in Sources */,
 				757BE7631E783461004E316C /* ClaimAccessTokenRequest.swift in Sources */,
 				75433EE61E9559800081FB97 /* FlowController.swift in Sources */,
+				7592F89D1E96B99100A89CF8 /* UILabel+Animation.swift in Sources */,
 				758F04AC1E6F58F600791B26 /* ViewController.swift in Sources */,
 				7597C0CE1E807846002E2772 /* String+Dictionary.swift in Sources */,
 				757DEE991E7711B700747128 /* AppService.swift in Sources */,
-				75433EDA1E954CA90081FB97 /* LoginInteractor.swift in Sources */,
+				75433EDA1E954CA90081FB97 /* LoginInteractable.swift in Sources */,
 				7597C0CB1E80622A002E2772 /* HTTPRequestResult.swift in Sources */,
 				757DEE9D1E77154700747128 /* URLSchemaService.swift in Sources */,
 				757BE75E1E782AD9004E316C /* NetworkService.swift in Sources */,
 				75433ED01E954A200081FB97 /* LoginViewController.swift in Sources */,
 				75433EFE1E9573CD0081FB97 /* NotificationCenterController.swift in Sources */,
-				75433ED31E954AF50081FB97 /* LoginPresenter.swift in Sources */,
+				75433ED31E954AF50081FB97 /* LoginPresentable.swift in Sources */,
 				758F04AA1E6F58F600791B26 /* AppDelegate.swift in Sources */,
 				7597C0C91E803C1B002E2772 /* User.swift in Sources */,
+				7592F89B1E96B33200A89CF8 /* EnterViewController.swift in Sources */,
 				75433EF81E9565100081FB97 /* Secure.swift in Sources */,
 				75433EE11E95545F0081FB97 /* LoginView.swift in Sources */,
-				75433ED81E954B680081FB97 /* LoginInteractable.swift in Sources */,
+				75433ED81E954B680081FB97 /* LoginInteractor.swift in Sources */,
 				757DEEA01E77320C00747128 /* GithubConfig.swift in Sources */,
-				75433EDC1E954CF40081FB97 /* LoginPresentable.swift in Sources */,
+				75433EDC1E954CF40081FB97 /* LoginPresenter.swift in Sources */,
 				75433EF61E955EB30081FB97 /* BasePresenter.swift in Sources */,
 				75433EE31E95547C0081FB97 /* LoginViewController+View.swift in Sources */,
 				757BE76B1E7872D6004E316C /* UserRequest.swift in Sources */,
